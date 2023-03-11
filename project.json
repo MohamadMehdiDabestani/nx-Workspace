@@ -15,7 +15,7 @@
         "main": "src/index.ts",
         "tsConfig": "tsconfig.app.json",
         "assets": ["src/assets"],
-        "command": "node dist/api/src/index.js",
+        
         "esbuildOptions": {
           "sourcemap": true,
           "outExtension": {
@@ -34,7 +34,8 @@
     "serve": {
       "executor": "@nrwl/js:node",
       "options": {
-        "buildTarget": "api:build"
+        "buildTarget": "api:build",
+        "command": "node dist/api/src/index.js"
       },
       "configurations": {
         "production": {
