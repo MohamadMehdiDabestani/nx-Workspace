@@ -38,8 +38,16 @@
         "command": "node dist/api/src/index.js"
       },
       "configurations": {
+        "options": {
+          "command": "node dist/api/src/index.js"
+        },
         "production": {
-          "buildTarget": "api:build:production"
+          "buildTarget": "api:build:production",
+          "command": "node dist/api/src/index.js",
+          "options": {
+            "command": "node dist/api/src/index.js"
+          }
+
         }
       }
     },
