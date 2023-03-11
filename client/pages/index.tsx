@@ -1,7 +1,6 @@
 import styles from './index.module.css';
-import {Testing} from '@api/shared'
+
 export function Index() {
-  const d:Testing = {title : "Hellow shared lib"}
   /*
    * Replace the elements below with your own.
    *
@@ -13,7 +12,7 @@ export function Index() {
         <div className="container">
           <div id="welcome">
             <h1>
-              <span> Hello there, {d.title}</span>
+              <span> Hello there, </span>
               Welcome client 👋
             </h1>
           </div>
