@@ -1,6 +1,7 @@
 import styles from './index.module.css';
-
+import { Testing } from '@api/shared';
 export function Index() {
+  const d: Testing = { title: 'Hello shared' };
   /*
    * Replace the elements below with your own.
    *
@@ -12,7 +13,7 @@ export function Index() {
         <div className="container">
           <div id="welcome">
             <h1>
-              <span> Hello there, </span>
+              <span> Hello there, {d.title}</span>
               Welcome hello 👋
             </h1>
           </div>
