@@ -15,7 +15,7 @@
         "main": "src/index.ts",
         "tsConfig": "tsconfig.app.json",
         "assets": ["src/assets"],
-        "command": "node dist/api/index.js",
+        "command": "node dist/api/src/index.js",
         "esbuildOptions": {
           "sourcemap": true,
           "outExtension": {
