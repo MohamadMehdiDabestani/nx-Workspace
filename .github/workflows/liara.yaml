@@ -18,6 +18,6 @@ jobs:
           npm i -g @liara/cli@3
           npm i -g nx
           ls
-          npx nx run build api --prod
+          npx nx run build --prod
           cd dist/api
           liara deploy --app="nxnodejs" --api-token="$LIARA_TOKEN" --detach --port=3000
