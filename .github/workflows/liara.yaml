@@ -16,7 +16,7 @@ jobs:
       # - run: npm ci
 
       - run: |
-          npm install -g @nrwl/cli
+          npm install
           ls
           npx nx format:check
       - run: npx nx affected -t lint --parallel=3
