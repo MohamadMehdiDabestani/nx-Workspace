@@ -19,6 +19,13 @@ jobs:
           npm install
           npm run build
           ls
-      - run: |
-          cd /dist/api
-          liara deploy --app="nxnodejs" --api-token="$LIARA_TOKEN" --detach --port=3000
+
+      # - run: |
+      #     cd /dist/api
+      #     liara deploy --app="nxnodejs" --api-token="$LIARA_TOKEN" --detach --port=3000
+    - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact dist
+          path: |
+            dist
