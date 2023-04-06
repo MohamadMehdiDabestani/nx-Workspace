@@ -15,7 +15,6 @@
         "main": "src/index.ts",
         "tsConfig": "tsconfig.app.json",
         "assets": ["src/assets"],
-        
         "esbuildOptions": {
           "sourcemap": true,
           "outExtension": {
@@ -34,20 +33,11 @@
     "serve": {
       "executor": "@nrwl/js:node",
       "options": {
-        "buildTarget": "api:build",
-        "command": "node dist/api/src/index.js"
+        "buildTarget": "api:build"
       },
       "configurations": {
-        "options": {
-          "command": "node dist/api/src/index.js"
-        },
         "production": {
-          "buildTarget": "api:build:production",
-          "command": "node dist/api/src/index.js",
-          "options": {
-            "command": "node dist/api/src/index.js"
-          }
-
+          "buildTarget": "api:build:production"
         }
       }
     },
