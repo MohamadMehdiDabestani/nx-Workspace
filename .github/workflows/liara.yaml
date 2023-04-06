@@ -20,5 +20,5 @@ jobs:
           npm run build
           ls
       - run: |
-          cd dist/api
+          cd /dist/api
           liara deploy --app="nxnodejs" --api-token="$LIARA_TOKEN" --detach --port=3000
