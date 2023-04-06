@@ -15,10 +15,12 @@ jobs:
       - uses: MansaGroup/nrwl-nx-action@v3.2.2
         with:
           targets: build
+          nxCloud: false
       - name: update-liara
         env:
           LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
         run: |
+          ls
           npx nx build api --prod
           npm i -g @liara/cli@3
           cd dist/api
