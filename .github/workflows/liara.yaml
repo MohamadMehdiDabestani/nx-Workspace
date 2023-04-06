@@ -15,7 +15,6 @@ jobs:
         env:
           LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
         run: |
-          npm ci
           npx nx format:check
           npx nx build hello --prod
           npm i -g @liara/cli@3
