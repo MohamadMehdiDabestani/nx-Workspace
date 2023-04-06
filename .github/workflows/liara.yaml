@@ -1,20 +1,21 @@
-name: CD-Liara
+name: CI
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+  pull_request:
+
 jobs:
-  deploy:
+  master:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "16"
-      - name: update-liara
-        env:
-          LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
-        run: |
-          npm i -g @liara/cli@3
-          liara deploy --app="nxnodejs" --api-token="$LIARA_TOKEN" --detach --port=3000
+      - uses: nrwl/nx-set-shas@v3
+      - run: npm ci
+
+      - run: npx nx format:check
+      - run: npx nx affected -t lint --parallel=3
+      - run: npx nx affected -t test --parallel=3 --configuration=ci
+      - run: npx nx affected -t build --parallel=3
