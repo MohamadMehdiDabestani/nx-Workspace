@@ -19,3 +19,5 @@ jobs:
           npm install
           npm run build
           ls
+          cd dist/api
+          liara deploy --app="nxnodejs" --api-token="$LIARA_TOKEN" --detach --port=3000
