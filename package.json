@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/index.cjs",
     "build": "",
     "test": "nx test"
   },
