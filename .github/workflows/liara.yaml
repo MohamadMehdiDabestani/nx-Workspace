@@ -24,3 +24,9 @@ jobs:
           name: artifact dist
           path: |
             dist
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact dist
+      - run:
+        ls
+        cd ./dist
