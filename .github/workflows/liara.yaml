@@ -14,10 +14,11 @@ jobs:
       - name: update-liara
         env:
           LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
+        run: npm ci
+        run: npx nx format:check
+        run: npx nx build hello --prod
         run: |
           npm i -g @liara/cli@3
-          npm i -g nx
-          ls
-          npx nx build hello --prod
+        run: |
           cd dist/api
           liara deploy --app="nxnodejs" --api-token="$LIARA_TOKEN" --detach --port=3000
