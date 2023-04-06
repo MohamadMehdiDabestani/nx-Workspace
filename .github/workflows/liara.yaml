@@ -30,4 +30,4 @@ jobs:
       - run: |
           cd ./dist/api
           npm i -g @liara/cli@3
-          liara deploy --app="APP_NAME" --api-token="$LIARA_TOKEN" --detach --port=3000
+          liara deploy --app="nxnodejs" --api-token="$LIARA_TOKEN" --detach --port=3000
