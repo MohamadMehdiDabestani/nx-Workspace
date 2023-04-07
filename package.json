@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node /index.cjs",
-    "build": "npx nx build api --prod",
+    "build": "",
     "test": ""
   },
   "private": true,
