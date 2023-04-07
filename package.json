@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.cjs",
-    "build": "",
+    "start": "node dist/api/index.cjs",
+    "build": "nx build",
     "test": "nx test"
   },
   "private": true,

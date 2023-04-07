@@ -18,21 +18,21 @@ jobs:
         with:
           node-version: "16"
       
-      - run: |
-          npm install
-          npx nx build --prod
-      - uses: actions/upload-artifact@v3
-        with:
-          name: artifact dist
-          path: |
-            dist
-      - uses: actions/download-artifact@v3
-        with:
-          name: artifact dist
-      - name: update-liara
-        env:
-          LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
-        run: |
-            cd ./dist/api
+      # - run: |
+      #     npm install
+      #     npx nx build --prod
+      # - uses: actions/upload-artifact@v3
+      #   with:
+      #     name: artifact dist
+      #     path: |
+      #       dist
+      # - uses: actions/download-artifact@v3
+      #   with:
+      #     name: artifact dist
+      # - name: update-liara
+      #   env:
+      #     LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
+      #   run: |
+      #       cd ./dist/api
             npm i -g @liara/cli@3
             liara deploy --app="nxnodejs" --api-token="$LIARA_TOKEN" --detach --port=3000
