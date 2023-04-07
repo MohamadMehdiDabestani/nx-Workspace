@@ -1,13 +1,10 @@
 import styles from './index.module.css';
-
+import {Testing} from '@api/shared'
 export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.css file.
-   */
+  const d : Testing = {title : "sad"}
   return (
     <div className={styles.page}>
+      {d.title}
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
